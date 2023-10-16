@@ -5,7 +5,8 @@
     "priceInCents": 1199,
     "color": "Phantom Black",
     "storage": 256,
-    "inStock": true
+    "inStock": true,
+    "onSale": false
   },
   {
     "id": "fB-4",
@@ -13,7 +14,8 @@
     "priceInCents": 1199,
     "color": "Natural Titanium",
     "storage": 256,
-    "inStock": false
+    "inStock": false,
+    "onSale": false
   },
   {
     "id": "gF-4",
@@ -21,7 +23,8 @@
     "priceInCents": 899,
     "color": "Snow White",
     "storage": 128,
-    "inStock": true
+    "inStock": true,
+    "onSale": false
   },
   {
     "id": "xr7P",
@@ -29,6 +32,25 @@
     "priceInCents": "999",
     "color": "Black",
     "storage": "128",
-    "inStock": "false"
+    "inStock": false,
+    "onSale": false
+  },
+  {
+    "id": "D50u",
+    "name": "One Plus 10 Pro",
+    "priceInCents": "899",
+    "color": "Blue",
+    "storage": "512",
+    "inStock": "true",
+    "onSale": false
+  },
+  {
+    "id": "xeG5",
+    "name": "Samsung Z-Flip 5",
+    "priceInCents": "999",
+    "color": "Lavender",
+    "storage": "256",
+    "inStock": "true",
+    "onSale": false
   }
 ]
