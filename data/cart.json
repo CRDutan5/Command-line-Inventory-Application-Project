@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Google Pixel 8 Pro",
+    "color": "Snow White",
+    "storage": 128,
+    "priceInCents": 899
+  },
+  {
+    "name": "Google Pixel 8 Pro",
+    "color": "Snow White",
+    "storage": 128,
+    "priceInCents": 899
+  },
+  {
+    "name": "Google Pixel 8 Pro",
+    "color": "Snow White",
+    "storage": 128,
+    "priceInCents": 899
+  },
+  {
+    "name": "Samsung Z-Flip 5",
+    "color": "Lavender",
+    "storage": 256,
+    "priceInCents": 999
+  },
+  {
+    "name": "One Plus 10 Pro",
+    "color": "Blue",
+    "storage": 512,
+    "priceInCents": 899
+  }
+]

@@ -5,10 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "node index.js index",
     "create": "node index.js create",
     "show": "node index.js show",
     "update": "node index.js update",
-    "destroy": "node index.js destroy"
+    "destroy": "node index.js destroy",
+    "details": "node index.js details",
+    "add": "node index.js add",
+    "calculate": "node index.js calculate",
+    "cancel": "node index.js cancel"
+
   },
   "keywords": [],
   "author": "",

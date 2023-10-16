@@ -2,11 +2,11 @@
   {
     "id": "cD-5",
     "name": "Samsung S23 Ultra",
-    "priceInCents": 1199,
+    "priceInCents": 999,
     "color": "Phantom Black",
     "storage": 256,
     "inStock": true,
-    "onSale": false
+    "onSale": true
   },
   {
     "id": "fB-4",
@@ -29,27 +29,27 @@
   {
     "id": "xr7P",
     "name": "Motorola Razr+",
-    "priceInCents": "999",
+    "priceInCents": 999,
     "color": "Black",
-    "storage": "128",
+    "storage": 128,
     "inStock": false,
     "onSale": false
   },
   {
     "id": "D50u",
     "name": "One Plus 10 Pro",
-    "priceInCents": "899",
+    "priceInCents": 899,
     "color": "Blue",
-    "storage": "512",
+    "storage": 512,
     "inStock": "true",
     "onSale": false
   },
   {
     "id": "xeG5",
     "name": "Samsung Z-Flip 5",
-    "priceInCents": "999",
+    "priceInCents": 999,
     "color": "Lavender",
-    "storage": "256",
+    "storage": 256,
     "inStock": "true",
     "onSale": false
   }

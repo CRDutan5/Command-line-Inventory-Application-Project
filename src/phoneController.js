@@ -1,17 +1,29 @@
 const { nanoid } = require("nanoid");
 const { readJSONFile, writeJSONFile } = require("./helpers");
+const fs = require('fs');
 
 const phones = readJSONFile("./data", "phones.json");
 
+const cart = readJSONFile("./data", "cart.json");
+
 const [,,,name,priceInCents,color,storage,inStock] = process.argv;
 
+const emptyArray = [];
+
+// User can see a list of all items
+function showPhones() {
+    let indexOfPhones = phones.map((phone) => `${phone.id} ${phone.name}`);
+    console.log(indexOfPhones);
+}
+
+// User can create a new item
 function createPhone(){
     const phone = {
         id: nanoid(4),
         name: name,
-        priceInCents: priceInCents,
+        priceInCents: +priceInCents,
         color: color,
-        storage: storage,
+        storage: parseInt(storage),
         inStock: inStock,
         onSale: false,
     };
@@ -19,20 +31,18 @@ function createPhone(){
     return phones;
 }
 
-// READ 
-// Function user can check which phones are available in the store that day and it'll show a list of the available phones
+// User can see the details of one item
+function detailsOfPhone(phoneId){
+    return phones.filter((phone) => phoneId === phone.id);
+}
 
+// User can see which phone is in stock that day
 function checkInStock () {
     // Use .filter to iterate and check which phones are in stock
     return phones.filter((phone) => phone.inStock === true);
 }
 
-// UPDATE
-// Function user can update the price on any cellphone. By inputting a price "npm run update 999." Will check if onSale is true
-// USER INPUT 999
-
-// Function iterate through phones and check if user input key for onSale is true. If it is allow them to update the price
-
+// User can update item
 function updateSalePrice (phoneId, updatedPrice) {
     // Check if inputted id matches any phone's id by using the .find() method
     const targetPhone = phones.find((phone) => {
@@ -53,6 +63,7 @@ function updateSalePrice (phoneId, updatedPrice) {
     return phones;
 }
 
+// User can delete an item
 function deletePhone(phoneId) {
     const index = phones.findIndex(phone => phone.id === phoneId);
 
@@ -66,9 +77,66 @@ function deletePhone(phoneId) {
     }
 }
 
+// JSON file to make cart
+// Add items,
+// Explain project in README
+
+// Add to cart function:
+// Expected Output: 
+// Samsung S23 Ultra Phantom Black 256GB: $1199
+// Google Pixel 8 Pro 128GB: $899
+// Total Price: $2098
+
+function addToCart(phoneId){
+
+    const targetPhone = phones.find((phone) => phoneId === phone.id);
+
+    if(targetPhone){
+        let cartItem = {
+            name: targetPhone.name,
+            color: targetPhone.color,
+            storage: targetPhone.storage,
+            priceInCents: targetPhone.priceInCents
+        }
+        cart.push(cartItem);
+    }
+    else{
+        console.log("Item Not Found");
+    }
+
+    console.log(cart);
+    return cart;
+}
+
+function calculateTotalCost() {
+    let totalCost = 0;
+
+    console.log(`PRODUCT                     PRICE          QUANTITY`);
+    console.log("-------------------------------------------------------");
+
+    for(let item of cart){
+        console.log(`${item.name}         $${item.priceInCents}.00`);
+        totalCost += item.priceInCents;
+    }
+    return `\nGrand Total: $${+totalCost}.00`;
+};
+
+function cancelCart() {
+    const jsonString = JSON.stringify(emptyArray, null, 2);
+    writeJSONFile("./data", "cart.json", jsonString);
+    console.log("Your cart has been cleared!");
+}
+
+
+
 module.exports = {
     createPhone,
     checkInStock,
     updateSalePrice,
     deletePhone,
+    showPhones,
+    detailsOfPhone,
+    addToCart,
+    calculateTotalCost,
+    cancelCart,
 };
