@@ -77,16 +77,6 @@ function deletePhone(phoneId) {
     }
 }
 
-// JSON file to make cart
-// Add items,
-// Explain project in README
-
-// Add to cart function:
-// Expected Output: 
-// Samsung S23 Ultra Phantom Black 256GB: $1199
-// Google Pixel 8 Pro 128GB: $899
-// Total Price: $2098
-
 function addToCart(phoneId, quantity){
 
     const targetPhone = phones.find((phone) => phoneId === phone.id);

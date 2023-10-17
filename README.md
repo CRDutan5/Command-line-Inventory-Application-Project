@@ -1,4 +1,4 @@
-# Cell Phone Store Command Line Inventory/Cart Project
+# Cell Phone Store Command Line Inventory/Cart Program
 A new cell phone store has opened up! Below you will learn the functionality and how to use the new inventory and cart system that is used across the store. Please make sure to read all the information for it relies you as the user to input certain information to fully use it at its full capacity!
 
 The user will be able to: 
