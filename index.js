@@ -5,6 +5,7 @@ const { showPhones, createPhone, checkInStock, updateSalePrice, deletePhone, det
 function run () {
     const action = process.argv[2];
     const phoneId = process.argv[3];
+    const quantity = process.argv[4];
 
     let writeToFile = false;
     let updatedPhones = [];
@@ -14,7 +15,7 @@ function run () {
     switch(action){
         case 'index':
             updatedPhones = showPhones();
-            console.log(updatedPhones);
+            // console.log(updatedPhones);
             break;
         case 'details':
             updatedPhones = detailsOfPhone(phoneId);
@@ -37,7 +38,7 @@ function run () {
             writeToFile = true;
             break;
         case 'add':
-            updatedCart = addToCart(phoneId);
+            updatedCart = addToCart(phoneId, quantity);
             writeToFile = true;
             break;
         case 'calculate':

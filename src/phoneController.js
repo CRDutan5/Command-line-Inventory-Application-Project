@@ -87,7 +87,7 @@ function deletePhone(phoneId) {
 // Google Pixel 8 Pro 128GB: $899
 // Total Price: $2098
 
-function addToCart(phoneId){
+function addToCart(phoneId, quantity){
 
     const targetPhone = phones.find((phone) => phoneId === phone.id);
 
@@ -96,7 +96,8 @@ function addToCart(phoneId){
             name: targetPhone.name,
             color: targetPhone.color,
             storage: targetPhone.storage,
-            priceInCents: targetPhone.priceInCents
+            priceInCents: targetPhone.priceInCents,
+            qty: 1 * quantity,
         }
         cart.push(cartItem);
     }
@@ -115,11 +116,14 @@ function calculateTotalCost() {
     console.log("-------------------------------------------------------");
 
     for(let item of cart){
-        console.log(`${item.name}         $${item.priceInCents}.00`);
-        totalCost += item.priceInCents;
+        console.log(`${item.name}         $${item.priceInCents}.00              ${item.qty}`);
+        totalCost += item.priceInCents * item.qty;
     }
+
     return `\nGrand Total: $${+totalCost}.00`;
 };
+
+
 
 function cancelCart() {
     const jsonString = JSON.stringify(emptyArray, null, 2);

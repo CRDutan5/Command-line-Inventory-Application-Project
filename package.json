@@ -14,7 +14,6 @@
     "add": "node index.js add",
     "calculate": "node index.js calculate",
     "cancel": "node index.js cancel"
-
   },
   "keywords": [],
   "author": "",
