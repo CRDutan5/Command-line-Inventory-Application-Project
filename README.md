@@ -54,7 +54,8 @@ The index command will allow you to view the phones along with their respective 
 ```
 
 ### Details
-The details command will allow you to view the details of a specific phone through the use of a phone id. The user will input the command along with the appropriate phoneId.
+The details command will allow you to view the details of a specific phone through the use of a phone id. The user will input the command along with the appropriate phoneId
+
 `npm run details cD-5`
 
 **Sample Output:**
@@ -74,7 +75,9 @@ The details command will allow you to view the details of a specific phone throu
 
 ### Create
 The create command will allow you to create a phone and add it to the system. It does have a larger amount of user inputs in order to fully process it. Below the example I will be using is the One Plus 10 Pro.
+
 `npm run create "One Plus 10 Pro" 899 Blue 512 true`
+
 After running the command you follow up with the name of the phone. If it has a space you put it into a string format through the use of "". Then you follow up with the retail price which is 899. Then the color which is Blue. Then the storage capacity which is 512. Lastly you enter true or false to show if you have it in stock or not.
 
 **Sample Output:**
@@ -94,6 +97,7 @@ You may notice that there is a key value called "id" that was already generated.
 
 ### Show
 The show command will allow you to see what phones are currently in stock in the store. Since the function `checkInStock()` is embedded.
+
 `npm run show`
 
 **Sample Output**
@@ -124,6 +128,7 @@ As you can see, the only phones being displayed are the ones that were set to tr
 
 ### Update
 The update command will allow you to change the price of any phone. However, this command will ask a little more from the user. It will ask you for you to insert the phone's id that you'll be updating. And it will also ask for the new updated price. So the command will look something like this:
+
 `npm run update cD-5 999`
 
 **Sample Output**
@@ -167,6 +172,7 @@ The output will show you that within the `phones.JSON` file that phone is no lon
 ### Add
 
 The add command will allow you to add phones into your cart through the use of the phoneId and the quantity. Once added it will be shown in the `cart.json` file.
+
 `npm run add cD-5 2`
 
 **Sample Output:**
