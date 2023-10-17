@@ -1,16 +1,1 @@
-[
-  {
-    "name": "Samsung Z-Flip 5",
-    "color": "Lavender",
-    "storage": 256,
-    "priceInCents": 999,
-    "qty": 2
-  },
-  {
-    "name": "Samsung S23 Ultra",
-    "color": "Phantom Black",
-    "storage": 256,
-    "priceInCents": 999,
-    "qty": 1
-  }
-]
+[]

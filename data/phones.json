@@ -2,11 +2,11 @@
   {
     "id": "cD-5",
     "name": "Samsung S23 Ultra",
-    "priceInCents": 999,
+    "priceInCents": 1199,
     "color": "Phantom Black",
     "storage": 256,
     "inStock": true,
-    "onSale": true
+    "onSale": false
   },
   {
     "id": "fB-4",
